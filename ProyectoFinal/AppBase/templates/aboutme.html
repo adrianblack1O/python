@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contenidoQCambia %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/aboutme.css' %}">
+
+    <h1>Hola! Soy Adrian Sosa</h1>
+
+    <img class="center" height="400px" src="{% static 'css/foto cv.jpeg' %}" alt="Imagen saludo">
+
+    <body>
+    <h5>Un poco sobre mi!</h5>
+    <p>Nací en 1985, soy de Buenos Aires, Argentina, hincha del rojo de Avellaneda.</p>
+    <p>Fanatico de las peliculas, la lectura y los video juegos, estoy mas cerca de ser profesor de filosofia que ingeniero.</p>
+	<p>Ahora, si bien Trabajo en iT, mi fuerte siempre fue el fierro y la infraestructura pero teniendo conciencia de mis limitaciones,</p>
+	<p>Me embarque en la tarea de comenzar a interiorizarme en tema programacion. Por eso, dejo mis repositorios para darme a conocer a traves de mi codigo!</p>
+
+    <div style="margin-top: 20px;"></div>
+    <a href="https://github.com/adrianblack1O" target="_blank"><button>Visitar Github</button></a>
+    </div>
+
+    <div style="margin-top: 20px;">
+        {% url 'Inicio' as url %}
+        <button class="center" type="button" onclick="window.location.href='{{ url }}'">Volver a la Home</button>
+    </div>
+{% endblock contenidoQCambia %}
